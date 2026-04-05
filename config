@@ -15,7 +15,7 @@ for_window [class="^.*"] border pixel 1
 set $mod Mod4
 # set $mod Mod1
 
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/rose-pine-sword.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/anime/sword-red.png
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
@@ -242,3 +242,10 @@ bindsym $mod+m exec rmpc
 exec --no-startup-id xsetroot -cursor_name left_ptr
 exec --no-startup-id gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic'
 exec --no-startup-id gsettings set org.gnome.desktop.interface cursor-size 16
+# Workspace assignments
+assign [class="kitty"] → 2
+assign [class="firefox"] → 3
+assign [class="obsidian"] → 4
+assign [class="vlc"] → 5
+assign [class="Spotify"] → 5
+assign [class="rnote"] → 8
