@@ -15,7 +15,7 @@ for_window [class="^.*"] border pixel 1
 set $mod Mod4
 # set $mod Mod1
 
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/main3.jpeg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/ay.jpg
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
@@ -252,3 +252,9 @@ gaps inner 4
 gaps outer 2
 smart_gaps on
 smart_borders on
+
+# Move window to scratchpad (hide it)
+bindsym $mod+Shift+minus move scratchpad
+
+# Show / hide scratchpad
+bindsym $mod+minus scratchpad show
