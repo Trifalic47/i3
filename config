@@ -15,13 +15,18 @@ for_window [class="^.*"] border pixel 1
 set $mod Mod4
 # set $mod Mod1
 
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/ay.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/jackie-hubbard.jpg
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
 # kill any hanging polybar processes
 exec_always killall polybar
-exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+# exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+bar {
+    status_command i3status
+    position bottom
+    font pango:DejaVu Sans 7
+}
 exec --no-startup-id xset s off -dpms
 
 ## Screenshots (No Print key)
