@@ -12,29 +12,33 @@ order += "cpu_temperature 0"
 order += "wireless _first_"
 order += "tztime local"
 
-# CPU usage
 cpu_usage {
     format = "CPU %usage"
 }
 
-# RAM usage
 memory {
     format = "RAM %percentage_used"
 }
 
-# CPU temperature (may need sensor adjustment)
 cpu_temperature 0 {
     format = "%degrees°C"
     max_threshold = 80
 }
 
-# WiFi (short, no IP)
 wireless _first_ {
     format_up = "W %quality"
     format_down = "W down"
 }
 
-# Time (compact)
+order += "volume master"
+
+volume master {
+    format = "VOL %volume"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
 tztime local {
     format = "%H:%M"
 }
