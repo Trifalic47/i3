@@ -15,7 +15,7 @@ for_window [class="^.*"] border pixel 1
 set $mod Mod4
 # set $mod Mod1
 
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/jackie-hubbard.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/Gruvbox/brain-gruv-0.png
 exec_always --no-startup-id ~/.config/i3/volume.sh
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
@@ -243,7 +243,6 @@ client.background        $base
 # Use for_window to handle the "Nice UI" floating look automatically
 
 # The keybinding just launches the terminal with a specific "class" name
-bindsym Control+Mod1+h exec polybar-msg cmd toggle
 bindsym $mod+m exec rmpc
 exec --no-startup-id xsetroot -cursor_name left_ptr
 exec --no-startup-id gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic'
@@ -254,7 +253,7 @@ assign [class="obsidian"] → 4
 assign [class="vlc"] → 5
 assign [class="Spotify"] → 5
 assign [class="rnote"] → 8
-gaps inner 4
+gaps inner 1
 gaps outer 2
 smart_gaps on
 smart_borders on
@@ -265,3 +264,4 @@ bindsym $mod+Shift+minus move scratchpad
 # Show / hide scratchpad
 bindsym $mod+minus scratchpad show
 bindsym Mod4+comma exec --no-startup-id rofimoji --clipboarder xclip --action copy
+bindsym Control+Mod1+h bar mode toggle
